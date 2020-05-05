@@ -116,7 +116,7 @@ export const postData = async (url = '', data = {}) => {
 export const updateUI = async (data) => {
   outputData.classList.remove("hidden");
   outputData.scrollIntoView({ behavior: "smooth" });
-  const request = await fetch(pixaURL + pixaAPIkey + "&q=" + data.destination + "+city&image_type=photo");
+  const request = await fetch(pixaURL + pixaAPIkey + "&q=" + data.destination + "+city&image_type=photo&pretty=true&category=places");
 
   try {
     const imageLink = await request.json();
