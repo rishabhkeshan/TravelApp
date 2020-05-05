@@ -1,0 +1,51 @@
+nav {
+    background-color: #39CCCC;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 5vh;
+    padding: 10px;
+    border-bottom-right-radius: 6px;
+}
+
+#nav-title {
+    display: flex;
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    color: #222;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: $textFont;
+}
+
+#brand {
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+@media (min-width: 600px) {
+    nav {
+        height: 60px;
+    }
+
+    #nav-title {
+        display: flex;
+        flex-flow: row wrap;
+        width: 40%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #brand {
+        font-size: 1.2em;
+        text-align: center;
+        margin-left: 10px;
+        padding-top: 10px;
+        font-weight: 600;
+    }
+}

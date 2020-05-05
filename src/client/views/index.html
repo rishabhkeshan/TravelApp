@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RK Travels | Travel Planner App</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <nav>
+      <div id="nav-title">
+        <div id="brand">RK Travels</div>
+      </div>
+    </nav>
+  </header>
+  <!-- UserInput -->
+  <main class="main">
+    <section id="TravelDetails" class="section">
+      <div class="container">
+        <form class="inputForm" id="form">
+          <h2 class="formTitle">Travel Planner</h2>
+          <input type="text" class="userInput TravelDest" name="destiny" placeholder="Trip to..." autocomplete="off"
+            required>
+          <label class="TravelDate" for="date">Departure Date</label>
+          <input type="date" class="userInput inputDate" name="date" required>
+          <input type="submit" class="submitForm" name="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+    <!-- Journey Details -->
+    <section id="outputData" class="section hidden">
+      <div class="container">
+        <div class="destImage">
+          <img src="" alt="destination image" id="PixabayImage">
+        </div>
+        <div class="outputContainer">
+          <h2 class="desti output">You are going to : <span id="city"></span></h2>
+          <h2 class="dateD output">Departing on : <span id="date"></span></h2>
+          <h2 class="numDays output"><span id="dest"></span> is <span id="days">  </span> days away</h2>
+          <h2 class="temp output">Max Temp. : <span id="maxtemp"></span>&#176;C  |  Min Temp. : <span
+              id="mintemp"></span>&#176; C</h2>
+          <h2 class="forecast output">Forecast : <span id="summary"></span>.</h2>
+          <a class="button" id="save" href="#">Save</a>
+          <a class="button" id="delete" href="#">Delete</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="ftext">
+      <p>© 2020, RK Travels. All rights reserved</p>
+    </div>
+  </footer>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+
+</html>

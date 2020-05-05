@@ -1,0 +1,19 @@
+.footer {
+  background-color: #66f;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  font-family: $textFont;
+  font-size: 0.5rem;
+  justify-content: center;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100vw;
+}
+  .ftext {
+    font-family: $mainFont;
+    font-size: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.3rem;
+  }
+
